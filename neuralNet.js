@@ -15,7 +15,7 @@ class neuralNet{
 		this.lr=learnRate;
 		
 		let weightsarr=[];
-		nodes=[inpNodes].concat(hidNodes,outNodes);
+		let nodes=[inpNodes].concat(hidNodes,outNodes);
 		let u=0;
 		for(let k=0;k<nodes.length-1;k++){
 			weightsarr[k]=[];
