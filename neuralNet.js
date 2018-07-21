@@ -45,7 +45,7 @@ class neuralNet{
 				continue;
 			};
 			inp[k]=matrix.dot(this.weights[k-1],out[k-1]);
-			out[k]=new matrix(inp[k].size[0],inp[k].size[1],sigm(inp[k].cells));
+			out[k]=new matrix(inp[k].size[0],1,sigm(inp[k].cells));
 		};
 		let err=[];
 		for(let k=this.hidn.length+1;k>=0;k--){
@@ -77,7 +77,7 @@ class neuralNet{
 				continue;
 			};
 			inp[k]=matrix.dot(this.weights[k-1],out[k-1]);
-			out[k]=new matrix(inp[k].size[0],inp[k].size[1],sigm(inp[k].cells));
+			out[k]=new matrix(inp[k].size[0],1,sigm(inp[k].cells));
 		};
 		return out[this.hidn.length+1].cells;
 		
